@@ -11,7 +11,7 @@ const ACTION = "https://formspree.io/f/YOUR_ID"; // 或改成你自己的收集�
       </div>
       <form :action="ACTION" method="POST" class="flex-1 flex gap-2 w-full md:w-auto">
         <input type="email" name="email" required placeholder="你的 Email"
-               class="flex-1 min-w-0">
+               class="flex-1 min-w-0 dark:text-neutral-900">
         <button class="btn-primary">訂閱</button>
       </form>
     </div>
