@@ -1,14 +1,14 @@
 // --- Trust Badges（放在 public/brands，使用絕對路徑） ---
 export const trust = [
-  { src: "/public/brands/logo-1.svg", alt: "Brand A" },
-  { src: "/public/brands/logo-2.svg", alt: "Brand B" },
-  { src: "/public/brands/logo-3.svg", alt: "Brand C" },
-  { src: "/public/brands/logo-4.svg", alt: "Brand D" },
-  { src: "/public/brands/logo-5.svg", alt: "Brand E" },
-  { src: "/public/brands/logo-6.svg", alt: "Brand F" },
+  { src: "/brands/logo-1.svg", alt: "Brand A" },
+  { src: "/brands/logo-2.svg", alt: "Brand B" },
+  { src: "/brands/logo-3.svg", alt: "Brand C" },
+  { src: "/brands/logo-4.svg", alt: "Brand D" },
+  { src: "/brands/logo-5.svg", alt: "Brand E" },
+  { src: "/brands/logo-6.svg", alt: "Brand F" },
 ];
 
-// --- 以下維持你原本的設定（可自行調整文案） ---
+// --- 以下維持你的既有設定（可調文案） ---
 export const features = [
   { icon:"⚡", title:"快速上線", desc:"Vite + Tailwind 結構，3 分鐘跑起來。", href:"/features" },
   { icon:"📱", title:"RWD 穩定", desc:"行動優先設計，所有斷點皆妥當。", href:"/features" },

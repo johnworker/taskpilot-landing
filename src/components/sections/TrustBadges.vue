@@ -1,11 +1,14 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import { trust } from '../../config/sections.js'; // 若沒有 @ 別名，改成 ../../config/sections
+import { ref } from 'vue';
+
+// 你的專案若有 @ 指到 /src（見下方 vite.config.js），可保留這行；
+// 若沒有別名，請改成：import { trust } from '../../config/sections';
+import { trust } from '@/config/sections';
 
 const badges = ref(Array.isArray(trust) ? trust : []);
 
 function onImgError(e) {
-  // 圖片載入失敗時，換成簡易佔位 SVG，避免破圖
+  // 載入失敗 → 內建佔位，避免破圖
   const fallbackSvg =
     'data:image/svg+xml;utf8,' +
     encodeURIComponent(`
@@ -18,10 +21,6 @@ function onImgError(e) {
     `);
   e.target.src = fallbackSvg;
 }
-
-onMounted(() => {
-  // 可在此加上資料檢查或分析事件
-});
 </script>
 
 <template>
@@ -38,7 +37,7 @@ onMounted(() => {
           <img
             v-for="(item, i) in badges"
             :key="i"
-            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80 dark:invert"
+            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80"
             :src="item.src"
             :alt="item.alt || 'Logo'"
             loading="lazy"
@@ -47,7 +46,7 @@ onMounted(() => {
           />
         </template>
 
-        <!-- 沒資料時給 6 個 placeholder -->
+        <!-- 沒配置也不會壞版 -->
         <template v-else>
           <div v-for="i in 6" :key="i" class="h-8 w-28 bg-gray-200 dark:bg-gray-700 rounded" />
         </template>
@@ -57,5 +56,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* 視覺細節可在這裡微調 */
+/* 需要再微調可加在這裡 */
 </style>
