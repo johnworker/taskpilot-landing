@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { trust } from '@/config/sections'; // 若沒有 @ 別名，改成 ../../config/sections
+import { trust } from '../../config/sections.js'; // 若沒有 @ 別名，改成 ../../config/sections
 
 const badges = ref(Array.isArray(trust) ? trust : []);
 
@@ -38,7 +38,7 @@ onMounted(() => {
           <img
             v-for="(item, i) in badges"
             :key="i"
-            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80"
+            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80 dark:invert"
             :src="item.src"
             :alt="item.alt || 'Logo'"
             loading="lazy"
