@@ -1,11 +1,11 @@
 // --- Trust Badges（放在 public/brands，使用絕對路徑） ---
 export const trust = [
-  { src: "/brands/logo-1.svg", alt: "Brand A" },
-  { src: "/brands/logo-2.svg", alt: "Brand B" },
-  { src: "/brands/logo-3.svg", alt: "Brand C" },
-  { src: "/brands/logo-4.svg", alt: "Brand D" },
-  { src: "/brands/logo-5.svg", alt: "Brand E" },
-  { src: "/brands/logo-6.svg", alt: "Brand F" },
+  { src: "/public/brands/logo-1.svg", alt: "Brand A" },
+  { src: "/public/brands/logo-2.svg", alt: "Brand B" },
+  { src: "/public/brands/logo-3.svg", alt: "Brand C" },
+  { src: "/public/brands/logo-4.svg", alt: "Brand D" },
+  { src: "/public/brands/logo-5.svg", alt: "Brand E" },
+  { src: "/public/brands/logo-6.svg", alt: "Brand F" },
 ];
 
 // --- 以下維持你原本的設定（可自行調整文案） ---

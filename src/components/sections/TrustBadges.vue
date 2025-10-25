@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue';
-import { trust } from '@/config/sections'; // 若沒有 @ 別名，改成 ../../config/sections
+import { onMounted, ref } from 'vue';
+import { trust } from '../../config/sections.js'; // 若沒有 @ 別名，改成 ../../config/sections
 
 const badges = ref(Array.isArray(trust) ? trust : []);
 
 function onImgError(e) {
-  // 圖片載入失敗 → 用簡易佔位，避免破圖影響版面
+  // 圖片載入失敗時，換成簡易佔位 SVG，避免破圖
   const fallbackSvg =
     'data:image/svg+xml;utf8,' +
     encodeURIComponent(`
@@ -18,6 +18,10 @@ function onImgError(e) {
     `);
   e.target.src = fallbackSvg;
 }
+
+onMounted(() => {
+  // 可在此加上資料檢查或分析事件
+});
 </script>
 
 <template>
@@ -34,7 +38,7 @@ function onImgError(e) {
           <img
             v-for="(item, i) in badges"
             :key="i"
-            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80"
+            class="h-8 w-auto opacity-70 transition hover:opacity-100 dark:opacity-80 dark:invert"
             :src="item.src"
             :alt="item.alt || 'Logo'"
             loading="lazy"
@@ -43,7 +47,7 @@ function onImgError(e) {
           />
         </template>
 
-        <!-- 無資料時：預留版面 -->
+        <!-- 沒資料時給 6 個 placeholder -->
         <template v-else>
           <div v-for="i in 6" :key="i" class="h-8 w-28 bg-gray-200 dark:bg-gray-700 rounded" />
         </template>
@@ -53,5 +57,5 @@ function onImgError(e) {
 </template>
 
 <style scoped>
-/* 需要再微調可加在這裡 */
+/* 視覺細節可在這裡微調 */
 </style>
