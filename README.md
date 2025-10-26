@@ -3,7 +3,7 @@
 高轉換的 Vue + Tailwind 著陸頁套組。完整頁面、深色模式、RWD、SEO 與分析事件欄位。
 
 > 版權聲明：**本專案由 Darkness 開發並擁有（Developed & Owned by Darkness）。**  
-> © 2023–2025 Darkness. All rights reserved.
+> © 2025 Darkness. All rights reserved.
 
 ---
 
