@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 常用工具類 */
+:root { --radius: 1rem; }
+
+/* 站內全局色彩：亮色 = 白底深字；深色 = 深底白字 */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-white;
+  }
+  a {
+    @apply underline-offset-2 hover:no-underline;
+  }
+
+   a {
+    display: inline-block;
+    transform-origin: center center; /* 視覺從左下放大，較不突兀 */
+    transition: transform 120ms ease, color 120ms ease;
+  }
+
+  /* hover 放大 */
+  a:hover {
+    transform: scale(1.05);
+  }
+  
+   /* iOS 安全區：確保 fixed 底部元件不被擋住 */
+  :root { --safe-bottom: env(safe-area-inset-bottom); }
+
+  /* Sticky 元件不做 hover 放大，避免抖動 */
+  .no-hover-scale:hover { transform: none !important; }
+
+  /* 文章容器本體：字色與連結樣式基準 */
+  .dark figcaption {
+    color: #fff;
+    font-weight: bolder;
+    ::marker {
+      color: #e5e5e5 !important;
+    }
+  }
+  .dark .prose {
+    color: #fff;                           /* 預設白字 */
+  }
+  .dark .prose a {
+    color: #c7d2fe !important;             /* 連結：偏亮（indigo-200 感） */
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .dark .prose a:hover {
+    color: #e0e7ff !important;             /* hover 再亮一點 */
+  }
+
+  /* 標題：維持純白、強對比 */
+  .dark .prose h1,
+  .dark .prose h2,
+  .dark .prose h3,
+  .dark .prose h4,
+  .dark .prose h5,
+  .dark .prose h6 {
+    color: #fff !important;
+  }
+
+  /* 文字節點：段落、列表、定義列表、圖說等 → 白字 */
+  .dark .prose p,
+  .dark .prose li,
+  .dark .prose dt,
+  .dark .prose dd,
+  .dark .prose figcaption,
+  .dark .prose blockquote p {
+    color: #fff !important;
+  }
+
+  /* 區隔元素邊界顏色（更貼合深底） */
+  .dark .prose hr {
+    border-color: #262626 !important;      /* neutral-800 */
+  }
+  .dark .prose blockquote {
+    color: #fff !important;
+    border-left-color: #404040 !important; /* neutral-700 */
+  }
+
+  /* 程式碼與等寬元素（保留對比與可讀性） */
+  .dark .prose code {
+    color: #fff !important;
+    background-color: #0f0f10 !important;  /* 深灰底（避免整片白字單調） */
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.375rem;
+  }
+  .dark .prose pre {
+    color: #fff !important;
+    background-color: #0b0b0c !important;  /* 比行內 code 再深一點 */
+    border: 1px solid #1f1f1f;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+  }
+  .dark .prose pre code {
+    background-color: transparent !important; /* pre 內的 code 不再套底色 */
+    padding: 0;
+  }
+  .dark .prose kbd {
+    color: #fff !important;
+    background-color: #1f1f1f !important;
+    border: 1px solid #333;
+  }
+
+  /* 標記文字（mark）在深色下改成亮底深字，突顯重點 */
+  .dark .prose mark {
+    color: #111 !important;
+    background-color: #fde68a !important;  /* amber-300 感 */
+    border-radius: 0.25rem;
+    padding: 0.05rem 0.25rem;
+  }
+
+  /* 表格：邊框與表頭處理，保留清晰分隔 */
+  .dark .prose table {
+    color: #fff !important;
+    border-color: #262626 !important;       /* 外框 */
+  }
+  .dark .prose thead th {
+    color: #fff !important;
+    background-color: #111112 !important;   /* 淺淺的底，與內容列做區隔 */
+    border-bottom: 1px solid #262626 !important;
+  }
+  .dark .prose tbody td,
+  .dark .prose tbody th {
+    border-top: 1px solid #1f1f1f !important;
+  }
+
+  /* 圖片說明 & 小字（副標） */
+  .dark .prose small,
+  .dark .prose .caption,
+  .dark .prose .lead {
+    color: #e5e5e5 !important;              /* 比純白稍柔，避免太刺眼 */
+  }
+
+  /* 列表符號顏色（確保看得見） */
+  .dark .prose ul > li::marker,
+  .dark .prose ol > li::marker {
+    color: #e5e5e5 !important;
+  }
+
+  /* 引導性按鈕樣式不變：這套只限 .prose，CTA 通常不在 .prose 內 */
+  /* 如果有在文章內放按鈕，建議直接用 .btn-primary（不受此處影響） */
+}
+
+@layer utilities {
+  .no-hover-scale:hover { transform: none !important; }
+}
+
+
+/* 版心、按鈕、卡片等通用樣式 */
+.container-p { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+/* 使用 tailwind.config.js 裡的 brand 色票（單一主色） */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand px-5 py-3 text-white font-medium hover:bg-brand-600 transition;
+}
+
+/* 卡片在亮/暗色下的背景與邊框 */
+.card {
+  @apply rounded-2xl shadow-sm ring-1 ring-black/5 bg-white text-neutral-900;
+}
+.dark .card {
+  @apply bg-neutral-900 text-white ring-white/10;
+}
+
+/*（如需額外區塊的深色覆蓋，直接使用 dark: 前綴即可） */
+
+/* --- Force: 深色模式下，所有 <p> 一律白字 --- */
+.dark p { color: #fff !important; }
+
+/* 使用了 @tailwindcss/typography 的文章區（.prose）也一起處理 */
+.dark .prose p { color: #fff !important; }
+
+/* 其他全域：維持深底（你已經有下列設定）：
+   body 深色： bg-neutral-950
+   卡片深色： .dark .card { bg-neutral-900; text-white; ring-white/10; }
+   這樣「其餘區域背景都是深色」就能成立。 */

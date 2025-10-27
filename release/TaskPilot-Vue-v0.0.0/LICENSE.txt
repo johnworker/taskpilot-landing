@@ -1,0 +1,95 @@
+TaskPilot – Vue SaaS Landing Page Kit
+Commercial License / 商業授權條款
+Version 1.0 • 2025-10-27
+
+Copyright (c) 2025
+Author: <YOUR NAME OR COMPANY>
+Contact: <YOUR CONTACT EMAIL>
+Product URL (Demo or Store): <YOUR DEMO OR GUMROAD URL>
+Proof of Purchase: Gumroad/Lemon Squeezy 收據或等值訂單憑證
+
+────────────────────────────────────────────────────────────────────
+EN SUMMARY (English)
+You are purchasing a commercial license to use this template in your own or your clients’ projects, depending on the license tier. You may modify the source code for building final websites/apps. You may NOT resell, sub-license, or redistribute the template source itself as a competing product, nor include it in “website/app generators” that allow end-users to download the source.
+
+中文摘要（Chinese）
+您購買的是本模板之商業授權，可依授權等級使用於您自身或客戶專案。您可修改原始碼以產出最終網站/應用，但不得轉售、再授權或再散佈本模板的「源碼」本體，亦不得將其用於提供最終用戶下載源碼的「網站/應用產生器」。
+────────────────────────────────────────────────────────────────────
+
+1) 定義 Definitions
+- “Template/本模板”：指 TaskPilot – Vue SaaS Landing Page Kit 的所有檔案（含原始碼 `src/`、設定、靜態資產與文件）。
+- “End Product/最終產物”：指以本模板為基底，經客製或整合後的網站、應用或前端成品，交付給您或您的客戶使用。
+- “User Seat/開發席位”：實際參與開發與取得源碼的成員數量。
+
+2) 授權等級 License Tiers
+(請依實際販售方案選擇/對應，以下為常見分級)
+
+A. Personal / Single Project License（個人／單一專案）
+- 席位：1 位開發者。
+- 用途：可用於 1 個最終產物（自用或單一客戶）。
+- 允許修改源碼以完成該最終產物。
+- 禁止用於多個客戶或多個專案。
+
+B. Multi-Project (Pro) License（多專案／專業版）
+- 席位：最多 5 位開發者（同一公司或工作室內部）。
+- 用途：可用於多個最終產物（自用或多位客戶）。
+- 允許在多專案重複使用並修改源碼。
+- 不得轉售模板源碼或將其作為競品散佈。
+
+C. Agency License（代理／公司無限客戶版）
+- 席位：公司/代理內部不限席，限單一法人實體。
+- 用途：可為不限數量之客戶專案建立最終產物。
+- 允許在公司內部多團隊重複使用並修改源碼。
+- 仍不得轉售模板源碼或將其置於讓終端用戶可下載源碼的系統。
+
+※ 若您需要不同席位或 OEM 條款，請聯繫作者另簽制定制授權。
+
+3) 可為 Allowed Uses
+- 修改、整合、重構本模板源碼以製作最終產物。
+- 在最終產物中使用模板內的 UI、樣式與結構（可改色、改排版、加減區塊）。
+- 於最終產物進行商業使用（含自用商業專案或有酬客戶專案）。
+- 於最終產物中嵌入前端表單服務（Formspree / Netlify Forms 等）。
+
+4) 禁止事項 Prohibited Uses
+- 轉售、再授權、再散佈本模板源碼本體（含少量改動的「再打包版」）。
+- 將本模板整包收錄於任何「模板庫」「元件庫」「UI 套件」或「可下載源碼的產生器」中供第三方取得源碼。
+- 以本模板為主要價值製作衍生模板並上架為獨立競品（例如只更名與微調即上架）。
+- 去除版權宣告或將作者標示為您所有（保留著作權聲明即可，不強制要求顯名）。
+- 將模板用於非法、侵權或違反第三方法律條款之用途。
+
+5) 轉讓與團隊使用 Transfer & Team
+- 不可將授權轉讓給與購買主體不同之第三方（除非以公司併購/改名為同一法人）；
+- 團隊成員須屬於同一購買主體（公司/工作室/個人），並受席位數限制；
+- 外包協力若需要直接存取源碼，應計入席位或另購授權。
+
+6) 更新與支援 Updates & Support
+- 作者可提供合理範圍的錯誤修正與小版本更新；不保證對第三方依賴（如外部 API、瀏覽器變更）之相容性長期維護。
+- 支援管道與回應時間不作保證；如在商品頁或 README 另有承諾，依其文字為準。
+- 重大版本（MAJOR）可能作為付費升級；小版本（MINOR/PATCH）可視情況免費提供。
+
+7) 智慧財產與標誌 IP & Trademarks
+- 本模板之著作權歸作者所有；授權非獨占、不可轉讓。
+- 未經書面同意，不授權使用作者或產品之商標、標識進行對外背書或宣傳。
+
+8) 責任限制與免責 Limitation of Liability & Warranty Disclaimer
+- 本模板按「現狀」提供（AS IS），不附任何明示或默示之擔保，包括但不限於適售性、特定用途適用性與不侵權。
+- 在任何情況下，作者對於因使用或無法使用本模板所造成之任何直接、間接、偶然、特殊或後果性損害不負責任；即便已被告知可能發生該等損害。
+- 部署與合規（如隱私、Cookie、法令遵循）由使用者自行負責。
+
+9) 終止 Termination
+- 如違反本授權條款，授權即時終止；您應移除任何未遵循條款之使用與副本。
+- 恕不退款，除非商品頁另有明確退款政策。
+
+10) 其他條款 Miscellaneous
+- 本授權受您居住地或營業地之一般契約法規範；若需指定準據法與管轄，雙方可另行書面約定。
+- 如本條款任一條無效，不影響其餘條款效力。
+- 本授權條款可隨版本更新而調整；以您購買當下之版本為準（隨檔附帶）。
+
+────────────────────────────────────────────────────────────────────
+License Proof & Compliance 建議合規做法
+- 保留購買收據（Gumroad/Lemon Squeezy 訂單）；
+- 於專案 README 或內部授權記錄標示購買日期、授權等級、席位數；
+- 客戶專案交付時，確保客戶理解其取得的是「最終產物使用權」，非模板源碼之再分發權。
+
+Thank you for choosing TaskPilot – Vue SaaS Landing Page Kit.
+For custom/OEM licensing or extended seats, please contact the author.
